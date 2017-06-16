@@ -1,10 +1,57 @@
-import { Component } from '@angular/core';
+import {Component, Optional, ViewChild, ViewContainerRef} from '@angular/core';
+import {MdDialog, MdDialogRef, MdSnackBar , MdSidenav} from '@angular/material';
+
+declare  var window:any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+    host: {
+    '[class.m2app-dark]': 'isDarkTheme',
+  },
 })
 export class AppComponent {
-  title = 'app works!';
+
+ public isDarkTheme: boolean = false;
+ public menuSwich : boolean = false;
+ public menuIcon : boolean = false;
+ showShadow = true;
+  ngOnInit(){
+   
+    if(this.getIsDarkTheme()=== undefined){
+      this.setIsDarkTheme(this.isDarkTheme);
+    }else{
+      this.isDarkTheme = this.getIsDarkTheme();
+    }
+      this.resize();
+  }
+onResize(event) { 
+  if (event.target.innerWidth > 600) {
+      this.menuSwich = true;
+      this.menuIcon = true;
+     }else{
+       this.menuSwich = false;
+      this.menuIcon = false;
+     }
 }
+  resize(){
+     if (window.screen.width > 600) {
+      this.menuSwich = true;
+      this.menuIcon = true;
+     }
+  }
+
+  switchThem(){
+    this.isDarkTheme = !this.isDarkTheme;
+    this.setIsDarkTheme(this.isDarkTheme);
+  }
+  setIsDarkTheme(isDarkTheme) {
+    localStorage.setItem('isDarkTheme', JSON.stringify(isDarkTheme));
+  }
+   getIsDarkTheme() {
+    return JSON.parse(localStorage.getItem("isDarkTheme"));
+  }
+
+}
+

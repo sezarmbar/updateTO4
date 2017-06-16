@@ -1,0 +1,117 @@
+@mixin app-navbar-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  li a:hover:not(.active) {
+      background-color: mat-color($accent);
+  }
+  .activePage {
+      background-color:mat-color($accent);
+  }
+  ul {
+      background-color:mat-color($primary);
+  }
+}
+
+md-sidenav-container.m2app-dark {
+      background-color: #585858;
+}
+.app-main-content-div{
+  height: 60px;
+}
+.app-main-content {
+  margin-top:60px;
+  padding: 0px;
+  
+}
+
+.app-content md-card {
+  margin: 10px;
+}
+.mat-toolbar {
+      min-height: 60px !important;
+}
+// @media (min-width: 961px) {
+  .app-layout{
+    // height: calc(100vh - 64px);
+     height: 100vh;
+  }
+// }
+// @media (max-width: 960px) {
+// .app-layout{
+//     height: calc(100vh - 48px);
+//   }
+// }
+
+.app-sidenav {
+  padding: 0px;
+  min-width: 200px !important;
+}
+
+.app-content md-checkbox {
+  margin: 10px;
+}
+
+.app-toolbar-filler {
+  flex: 1 1 auto;
+}
+
+.app-toolbar-menu {
+  padding: 0 14px 0 14px;
+  color: white;
+}
+
+.app-icon-button {
+  box-shadow: none;
+  user-select: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  filter: none;
+  font-weight: normal;
+  height: auto;
+  line-height: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+.app-action {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+// navbar
+
+.ulmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 60px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 22px 16px;
+    text-decoration: none;
+}
+.navbar-style{
+  position: absolute;
+  right: 5px;
+}
