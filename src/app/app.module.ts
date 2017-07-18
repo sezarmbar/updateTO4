@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
-import {MdButtonModule,MdInputModule, MdCheckboxModule,MdSidenavModule,MdMenuModule,MdChipsModule,MdProgressBarModule} from '@angular/material';
+import {MdButtonModule,MdInputModule, MdCheckboxModule,MdSidenavModule,MdMenuModule,MdChipsModule,MdProgressBarModule,MdTabsModule} from '@angular/material';
 import 'hammerjs';
 // import { AgmCoreModule } from '@agm/core';
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -38,7 +38,7 @@ import { HausTableComponent , HausParkComponent , HausMapComponent , DirectionsM
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule,MdSidenavModule,MdChipsModule,MdInputModule,MdProgressBarModule,MdMenuModule,
+    MdButtonModule, MdCheckboxModule,MdSidenavModule,MdChipsModule,MdInputModule,MdProgressBarModule,MdMenuModule,MdTabsModule,
     ServiceAppRoutingModule,
     ParkTablePipe,
     serivceModul,
